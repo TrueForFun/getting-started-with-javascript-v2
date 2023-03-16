@@ -1,15 +1,15 @@
 // TODO: define addFavoriteBook(..) function
 
+// TODO: define printFavoriteBooks() function
+
 function addFavoriteBook(bookName) {
   if (!bookName.includes("Great")) {
     favoriteBooks.push(bookName);
+    console.log(favoriteBooks);
   }
 }
-
-// TODO: define printFavoriteBooks() function
-
 function printFavoriteBooks() {
-  console.log(`Favourite Books: ${favoriteBooks.length}`);
+  console.log(`Favorite Books: ${favoriteBooks.length}`);
   for (let bookName of favoriteBooks) {
     console.log(bookName);
   }
@@ -24,3 +24,19 @@ addFavoriteBook("You Don't Know JS");
 
 // TODO: print out favorite books
 printFavoriteBooks();
+
+function ask(question) {
+  setTimeout(function waitASec() {
+    console.log(question);
+  }, 1000);
+}
+ask("what is closure?");
+
+var workshop = {
+  teacher: "Kyle",
+  Sprosi(question) {
+    console.log(this.teacher, question);
+  },
+};
+
+workshop.Sprosi("pochemu ty zalupa takaya?");
