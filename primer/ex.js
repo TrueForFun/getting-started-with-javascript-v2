@@ -40,3 +40,14 @@ var workshop = {
 };
 
 workshop.Sprosi("pochemu ty zalupa takaya?");
+
+class BookShelf {
+  printFavoriteBooks() {
+    console.log(`Favorite Books: ${favoriteBooks.length}`);
+    for (let bookName of favoriteBooks) {
+      console.log(bookName);
+    }
+  }
+}
+
+const bookShelfInstance = new BookShelf();
